@@ -1,0 +1,35 @@
+#!/usr/bin/perl -w
+
+=head1 NAME
+
+twitter.pl - Command-line interface to 
+
+=cut
+
+use strict; use warnings;
+use lib "../lib";
+
+#Load the interface:
+use Twitter::CLI::Interface::Default;
+
+my $CLI = Twitter::CLI::Interface::Default->new;
+
+foreach my $user (@{ $CLI->_USER_NAMES }){
+    #Create a new user session for each user
+    my $user_session = Twitter::CLI::Interface::Default::UserSession->new_with_options;
+    
+    #Set username 
+    $user_session->_username( $user );#XXX: Need to get+verify the username from the config file
+    
+    #XXX: Get the password from the config file:
+    # Not implemented yet...
+    $user_session->_password( '$SOME_PASSWORD' );
+    
+    #Load a plugin with which to run this session
+    $user_session->load_plugin('Prompting');#Loads ::Plugin::Prompting
+
+    #Run the session with the plugin's run() subroutine
+    $user_session->run;
+}
+
+

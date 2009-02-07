@@ -1,0 +1,27 @@
+Configuration:
+    Stored in .perl directory in user's home directory within a directory structure
+    that mirrors the namespace of this module, i.e. ~/home/username/.perl/net/twitter/cli/config.ini
+RSS feeds:
+    Users should be able to subscribe to RSS feeds locally of all twitter activity. This prevents
+    distracting tweets popping up at automated intervals. Instead, you choose when to view your tweets.
+    The RSS feeds will be stored in the aforementioned config directory under accountname.rss
+Text editor view:
+    Store the tweets that have already been seen in a local flat database. When a command to view
+    tweets is executed, only the unviewed tweets are shown.
+HTML View:
+    Use Template Toolkit to generate tempfiles that can be opened in a web browser. Similar to
+    text editor view, with more formatting.
+Direct messaging:
+    Do you only want to be alerted by direct messages only at a specific time, but that time varies,
+    and you'd like to control that time via the CLI rather than logging into Twitter each time?
+    Turn direct message alerts off in Twitter and run the application in daemon mode,
+    having it send you emails for direct messages while it's running.
+Sending messages:
+    You use general Twitter syntax to direct or indirect message, i.e. 'd username' for direct
+    and '@username' for indirect.
+Indirect messaging:
+    Want to be alerted when someone indirect messages you? No problem! Specify that in the config
+    options
+Config and Args:
+    All config is modified via CLI like so:
+    username1 [-abcdefg] --arg1 --arg2 a=option1 b=option2 username2 [-abcdefg] --arg1 --arg2 a=option1 b=option2 (etc...)
