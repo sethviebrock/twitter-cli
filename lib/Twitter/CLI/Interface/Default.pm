@@ -1,4 +1,5 @@
 package Twitter::CLI::Interface::Default;
+use version;  $VERSION = qv('0.01_01');
 =head1 NAME
 
  - The great new !

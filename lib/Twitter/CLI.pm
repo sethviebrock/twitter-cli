@@ -1,4 +1,5 @@
 package Twitter::CLI;
+use version;  $VERSION = qv('0.01_01');
 use Moose;
 with qw/
     MooseX::Object::Pluggable
@@ -150,4 +151,6 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of 
+1; # End of
+__DATA__
+See perldoc Twitter::CLI for more information.

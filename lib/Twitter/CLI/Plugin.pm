@@ -1,4 +1,5 @@
 package Twitter::CLI::Plugin;
+use version;  $VERSION = qv('0.01_01');
 use Moose;
 =pod
 

@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 package Twitter::CLI::Plugin::Prompting;
+use version;  $VERSION = qv('0.01_01');
 use Moose::Role;
 use File::Temp qw/ tempfile /;
 
